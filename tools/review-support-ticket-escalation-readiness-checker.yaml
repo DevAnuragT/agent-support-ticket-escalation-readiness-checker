@@ -1,0 +1,59 @@
+{
+  "name": "review-support-ticket-escalation-readiness-checker",
+  "description": "Run Support Ticket Escalation Readiness Checker",
+  "version": "0.1.0",
+  "input_schema": {
+    "type": "object",
+    "properties": {
+      "payload": {
+        "type": "object",
+        "properties": {
+          "ticket_id": {
+            "type": "string",
+            "description": "ticket id"
+          },
+          "customer_impact": {
+            "type": "string",
+            "description": "customer impact"
+          },
+          "reproduction_steps": {
+            "type": "string",
+            "description": "reproduction steps"
+          },
+          "owning_team": {
+            "type": "string",
+            "description": "owning team"
+          }
+        },
+        "required": [
+          "ticket_id",
+          "customer_impact",
+          "reproduction_steps",
+          "owning_team"
+        ]
+      }
+    },
+    "required": [
+      "payload"
+    ]
+  },
+  "output_schema": {
+    "type": "object",
+    "properties": {
+      "status": {
+        "type": "string"
+      },
+      "score": {
+        "type": "object"
+      },
+      "findings": {
+        "type": "array"
+      }
+    }
+  },
+  "implementation": {
+    "type": "script",
+    "path": "review-support-ticket-escalation-readiness-checker.py",
+    "runtime": "python3"
+  }
+}

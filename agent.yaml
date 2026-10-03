@@ -1,0 +1,11 @@
+spec_version: "0.1.0"
+name: support-ticket-escalation-readiness-checker
+version: 0.1.0
+description: Check escalated support cases for impact, reproduction evidence, and owning team.
+skills:
+  - support-ticket-escalation-readiness-checker-skill
+tools:
+  - review-support-ticket-escalation-readiness-checker
+tags:
+  - customer-support
+  - evidence-driven

@@ -1,0 +1,29 @@
+{
+  "slug": "support-ticket-escalation-readiness-checker",
+  "title": "Support Ticket Escalation Readiness Checker",
+  "category": "customer-support",
+  "description": "Check escalated support cases for impact, reproduction evidence, and owning team.",
+  "fields": {
+    "ticket_id": {
+      "label": "ticket id",
+      "kind": "required",
+      "minimum": 0
+    },
+    "customer_impact": {
+      "label": "customer impact",
+      "kind": "text",
+      "minimum": 30
+    },
+    "reproduction_steps": {
+      "label": "reproduction steps",
+      "kind": "text",
+      "minimum": 20
+    },
+    "owning_team": {
+      "label": "owning team",
+      "kind": "required",
+      "minimum": 0
+    }
+  },
+  "limitations": "Uses caller-provided evidence only; cannot confirm external facts. Human review remains required."
+}
